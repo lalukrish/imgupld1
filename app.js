@@ -17,10 +17,10 @@ app.use(require("./routes/image"));
 
 //static files
 
-app.use(express.static(path.join(__dirname, "..client/build")));
+app.use(express.static(path.join(__dirname, "./client/build")));
 
 app.get("*", function (reqe, res) {
-  res.sendFile(path.join(__dirname, "../client/build/index.html"));
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
 //mongodb connection
